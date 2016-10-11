@@ -1,0 +1,127 @@
+<html>
+
+<head>
+  <title>
+    Login | VIT Quiz
+  </title>
+</head>
+<link rel="stylesheet" href="../static/css/materialize.min.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<script type="text/javascript" src="../static/js/jquery-2.1.1.min.js"></script>
+<script src="../static/js/materialize.min.js"></script>
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<body>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper light-blue darken-4">
+        <a href="../templates/index.html" class="brand-logo"><img src="..logo.png" width="50px" height="45px" align="center">&nbsp;<span class="text">VITQuiz</span></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Create A Quiz</a></li>
+          <li><a href="../templates/create.html">Profile</a></li>
+          <li><a href="../templates/rank.html">Scores &amp; Ranks</a></li>
+          <li><a href="../templates/login.html">Login</a></li>
+          <li><a href="../templates/signup.html">Signup</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="../templates/create.html">Create A Quiz</a></li>
+          <li><a href="../templates/profile.html">Profile</a></li>
+          <li><a href="../templates/rank.html">Scores &amp; Ranks</a></li>
+          <li><a href="../templates/login.html">Login</a></li>
+          <li><a href="../templates/signup.html">Signup</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div style="margin:0 auto; width: 70%;">
+    <h3 align="center">Create A Quiz</h3>
+    <div class="section white">
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="facultyid" type="text" class="validate">
+              <label for="facultyid">Faculty Id</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4">
+              <input id="totalmarks" type="number" class="validate">
+              <label for="totalmarks">Marks For Each Question</label>
+            </div>
+            <div class="input-field col s4">
+              <input id="marks" type="number" class="validate">
+              <label for="marks">Marks For Each Question</label>
+            </div>
+            <div class="input-field col s4">
+              <input id="timelimit" type="number" class="validate">
+              <label for="timelimit">Time Limit</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s3"></div>
+            <div class="file-field input-field col s6">
+              <div class="btn">
+                <span>File</span>
+                <input type="file">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+            <div class="input-field col s3"></div>
+          </div>
+          <div class="row">
+            <div class="input-field col s5"></div>
+            <div class="input-field col s2">
+              <a class="waves-effect waves-light btn">Create</a>
+            </div>
+            <div class="input-field col s5"></div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <footer class="page-footer  light-blue darken-4">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">If you find thid project usefull you can contribute to the project in GitHub.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Github</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">VIT University</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          &copy; 2014 Copyright @amitauddy
+          <a class="grey-text text-lighten-4 right" href="#!">VIT Academics</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript">
+      $(document).ready(function(){
+        $(".button-collapse").sideNav();
+        $('.parallax').parallax();
+      });
+    </script>
+</body>
+
+</html>

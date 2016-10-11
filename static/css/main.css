@@ -1,0 +1,33 @@
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Freestyle Script
+}
+#toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 1%;
+  left: 40% !important;  
+}
+
+.mywrapper {
+  text-align: center;
+}
+
+.mybutton {
+  position: absolute;
+  top: 85%;
+}
+
+.brand-logo > img {
+  top: 10px;
+  position: absolute;
+}
+
+.brand-logo > span {
+  margin-left: 50px;
+}
