@@ -2,7 +2,7 @@
 A online portal where teachers can organize quizes online. 
 
 # Technologies used
-* Front-end: HTML5 with Materialize framework
+* Front-end: HTML with Materialize framework
 * Back-end: Python/Flask
 * DB: SQLite
 

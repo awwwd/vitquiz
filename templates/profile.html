@@ -1,72 +1,69 @@
 <html>
 
 <head>
-  <title>
-    VIT Quiz
-  </title>
+    <title>
+        VIT Quiz
+    </title>
 </head>
 <link rel="stylesheet" href="../static/css/materialize.min.css">
 <link rel="stylesheet" href="../static/css/main.css">
-<script type="text/javascript" src="../static/js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../static/js/main.js"></script>
-<script src="../static/js/materialize.min.js"></script>
 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <body>
-  <div class="navbar-fixed">
-    <ul id="dropdown1" class="dropdown-content">
+    <ul id="dropdown" class="dropdown-content">
         <li><a href="#!">Profile Details</a></li>
         <li class="divider"></li>
         <li><a href="#!">Logout</a></li>
     </ul>
-    <nav>
-      <div class="nav-wrapper light-blue darken-4">
-        <a href="../templates/index.html" class="brand-logo"><img src="../static/logo.png" width="50px" height="45px" align="center">&nbsp;<span class="text">VITQuiz</span></a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="../templates/create.html">Create A Quiz</a></li>
-          <li><a href="../templates/profile.html">Profile</a></li>
-          <li><a href="../templates/rank.html">Scores &amp; Ranks</a></li>
-          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">{{ username }}<i class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li><a href="../templates/create.html">Create A Quiz</a></li>
-          <li><a href="../templates/profile.html">Profile</a></li>
-          <li><a href="../templates/rank.html">Scores &amp; Ranks</a></li>
-          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">{{ username }}<i class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper light-blue darken-4">
+                <a href="../templates/index.html" class="brand-logo"><img src="../static/logo.png" width="50px" height="45px" align="center">&nbsp;<span class="text">VITQuiz</span></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="../templates/create.html">Create A Quiz</a></li>
+                    <li><a href="../templates/profile.html">Profile</a></li>
+                    <li><a href="../templates/rank.html">Scores &amp; Ranks</a></li>
+                    <li><a class="dropdown-button" href="#" data-activates="dropdown">{{ username }}<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul> 
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="../templates/create.html">Create A Quiz</a></li>
+                    <li><a href="../templates/profile.html">Profile</a></li>
+                    <li><a href="../templates/rank.html">Scores &amp; Ranks</a></li>
+                    <li><a class="dropdown-button" href="#" data-activates="dropdown">{{ username }}<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
-
-
-  <div class="footer-copyright">
-    <footer class="page-footer light-blue darken-4">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Footer Content</h5>
-            <p class="grey-text text-lighten-4">If you find thid project usefull you can contribute to the project in GitHub.</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Github</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">VIT University</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-          &copy; 2014 Copyright @amitauddy
-          <a class="grey-text text-lighten-4 right" href="#!">VIT Academics</a>
-        </div>
-      </div>
-    </footer>
-
+    <div class="footer-copyright">
+        <footer class="page-footer light-blue darken-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Footer Content</h5>
+                        <p class="grey-text text-lighten-4">If you find thid project usefull you can contribute to the project in GitHub.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Github</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">VIT University</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    &copy; 2014 Copyright @amitauddy
+                    <a class="grey-text text-lighten-4 right" href="#!">VIT Academics</a>
+                </div>
+            </div>
+        </footer>
+<script type="text/javascript" src="../static/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../static/js/main.js"></script>
+<script src="../static/js/materialize.min.js"></script>
 </body>
 </html>
