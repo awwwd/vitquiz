@@ -22,15 +22,21 @@
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="../templates/create.html">Create A Quiz</a></li>
-                    <li><a href="../templates/profile.html">Profile</a></li>
+                    <li><a href="../templates/profile.html">
+                        {% if logged %}
+                            {{ name }}
+                        {% else %}
+                            Profile
+                    </a></li>
                     <li><a href="../templates/rank.html">Scores &amp; Ranks</a></li>
-                    <li><a class="dropdown-button" href="#" data-activates="dropdown">{{ username }}<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="">Edit Profile</a></li>
+                    <li><a href="">Logout</a></li>
+                    
                 </ul> 
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="../templates/create.html">Create A Quiz</a></li>
                     <li><a href="../templates/profile.html">Profile</a></li>
                     <li><a href="../templates/rank.html">Scores &amp; Ranks</a></li>
-                    <li><a class="dropdown-button" href="#" data-activates="dropdown">{{ username }}<i class="material-icons right">arrow_drop_down</i></a></li>
                 </ul>
             </div>
         </nav>
@@ -64,6 +70,6 @@
         </footer>
 <script type="text/javascript" src="../static/js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="../static/js/main.js"></script>
-<script src="../static/js/materialize.min.js"></script>
+<script type="text/javascript" src="../static/js/materialize.min.js"></script>
 </body>
 </html>

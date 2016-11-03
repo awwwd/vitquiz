@@ -38,7 +38,14 @@
 		<script>
         var  $toastContent = $('<span>Wrong user credential!</span>');
         Materialize.toast($toastContent, 4000, 'rounded')
-      </script> {% endif %}
+        </script>
+		{% endif %}
+		{% if error==False %}
+		<script>
+        var  $toastContent = $('<span>Now you can login.</span>');
+        Materialize.toast($toastContent, 4000, 'rounded')
+        </script>
+	  {% endif %}
 		<div class="section white">
 			<div class="row">
 				<form class="col s12" method="post" action="/login_check">

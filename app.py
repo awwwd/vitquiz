@@ -44,6 +44,7 @@ def signup():
 def login():
     return render_template('login.html')
 
+
 @app.route('/login_check', methods = ['POST'])
 def login_check():
     error = None
@@ -52,7 +53,7 @@ def login_check():
         l = exists.fetchall()
         if len(l):
             session['id']=l[0][0]
-            return redirect(url_for('index'))
+            return redirect(url_for('profile'))
         else:
             return render_template("login.html", error=True)
     return error
@@ -68,7 +69,7 @@ def signup_entry():
         else:
             g.db.execute('insert into students (fname,lname,reg,password,email) values (?,?,?,?,?)',[request.form['first_name'],request.form['last_name'],request.form['regno'],request.form['password'],request.form['email']])
             g.db.commit()
-            return redirect(url_for('login'))
+            return render_template("login.html", error=False)
     return error
 
 if __name__ == '__main__':

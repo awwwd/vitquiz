@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="../static/css/main.css">
 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<body>
+<body>			
 	<div class="navbar-fixed">
 		<nav>
 			<div class="nav-wrapper light-blue darken-4">
@@ -35,10 +35,11 @@
 	<div style="margin:0 auto; width: 70%;">
 		<h3 align="center">Signup</h3>
 		{% if error %}
-		<script>
-        var  $toastContent = $('<span>You have already signedup!</span>');
-        Materialize.toast($toastContent, 4000, 'rounded')
-      </script> {% endif %}
+			<script>
+			var  $toastContent = $('<span>You have already signedup!</span>');
+			Materialize.toast($toastContent, 4000, 'rounded')
+			</script> 
+		{% endif %}
 		<div class="section white">
 			<div class="row">
 				<form class="col s12" method="post" action="/signup_entry">
@@ -73,7 +74,7 @@
 					<div class="row">
 						<div class="input-field col s5"></div>
 						<div class="input-field col s2">
-							<button type="submit" class="waves-effect waves-light btn">Submit</button>
+							<button href="\signup_entry" type="submit" class="waves-effect waves-light btn">Submit</button>
 							<!--<input type="submit" name="signup" value="Signup" class="waves-effect waves-light btn">-->
 						</div>
 						<div class="input-field col s5"></div>
@@ -113,4 +114,5 @@
 	<script type="text/javascript" src="../static/js/main.js"></script>
 	<script src="../static/js/materialize.min.js"></script>
 </body>
+
 </html>
