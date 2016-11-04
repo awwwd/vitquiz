@@ -38,5 +38,28 @@ def index():
         return redirect(url_for('home'))
     return render_template('index.html')
 
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/home')
+def home():
+    return render_template('profile.html', name = session.get('reg'), logged = True)
+
+@app.route('/login_check', methods = ['GET', 'POST'])
+def login_check():
+    error = None
+    if request.method == 'POST':
+        exists = g.db.execute('select * from students where reg = ? and password = ?',[request.form['regno'],request.form['password']])
+        print exists
+        l = exists.fetchall()
+        print l
+        if len(l) > 0:
+            session['reg'] = l[0][2]
+            return redirect(url_for('home'))
+        else:
+            return render_template('login.html', error = True)
+
 if __name__ == '__main__':
     app.run(debug=True)
