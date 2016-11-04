@@ -34,43 +34,9 @@ def teardown_request(exception):
 
 @app.route('/')
 def index():
+    if bool(session.get('id')):
+        return redirect(url_for('home'))
     return render_template('index.html')
-
-@app.route('/signup')
-def signup():
-    return render_template('signup.html')
-
-@app.route('/login')
-def login():
-    return render_template('login.html')
-
-
-@app.route('/login_check', methods = ['POST'])
-def login_check():
-    error = None
-    if request.method == 'POST':
-        exists = g.db.execute('select * from students where reg = ? and password = ?', [request.form['regno'], request.form['password']])
-        l = exists.fetchall()
-        if len(l):
-            session['id']=l[0][0]
-            return redirect(url_for('profile'))
-        else:
-            return render_template("login.html", error=True)
-    return error
-
-
-@app.route("/signup_entry", methods = ['POST'])
-def signup_entry():
-    error = None
-    if request.method == 'POST':
-        exists = g.db.execute('select * from students where email = ?',[request.form['email']])
-        if len(exists.fetchall()):
-            return render_template('signup.html', error=True)
-        else:
-            g.db.execute('insert into students (fname,lname,reg,password,email) values (?,?,?,?,?)',[request.form['first_name'],request.form['last_name'],request.form['regno'],request.form['password'],request.form['email']])
-            g.db.commit()
-            return render_template("login.html", error=False)
-    return error
 
 if __name__ == '__main__':
     app.run(debug=True)
