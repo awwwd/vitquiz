@@ -45,7 +45,10 @@ def login():
 
 @app.route('/home')
 def home():
-    return render_template('profile.html', name = session.get('reg'), logged = True)
+    current = g.db.execute('select * from students where reg = ?',[session.get('reg')])
+    current = current.fetchall()
+    name = current[0][0]
+    return render_template('profile.html', name = name, logged = True)
 
 @app.route('/login_check', methods = ['GET', 'POST'])
 def login_check():
