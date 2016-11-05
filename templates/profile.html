@@ -10,11 +10,6 @@
 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <body>
-    <ul id="dropdown" class="dropdown-content">
-        <li><a href="#!">Profile Details</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">Logout</a></li>
-    </ul>
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper light-blue darken-4">
@@ -35,8 +30,15 @@
                 </ul> 
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="../templates/create.html">Create A Quiz</a></li>
-                    <li><a href="../templates/profile.html">Profile</a></li>
+                    <li><a href="../templates/profile.html">
+                        {% if logged %}
+                            {{ name }}
+                        {% else %}
+                            Profile
+                        {% endif %}
+                    </a></li>
                     <li><a href="../templates/rank.html">Scores &amp; Ranks</a></li>
+                    <li><a href="/logout">Logout</a></li>
                 </ul>
             </div>
         </nav>

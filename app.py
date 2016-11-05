@@ -39,8 +39,15 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/logout')
+def logout():
+    session.pop('reg', None)
+    return redirect(url_for('login'))
+
 @app.route('/login')
 def login():
+    if (bool(session.get('reg'))):
+        return redirect(url_for('home'))
     return render_template('login.html')
 
 @app.route('/home')
