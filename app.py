@@ -38,6 +38,12 @@ def index():
         return redirect(url_for('home'))
     return render_template('index.html')
 
+@app.route('/profile')
+def profile():
+    if (bool(session.get('reg'))):
+        return redirect(url_for('home'))
+    return render_template('login.html')
+
 
 @app.route('/logout')
 def logout():
